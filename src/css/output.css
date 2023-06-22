@@ -534,6 +534,10 @@ video {
   border-width: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -576,6 +580,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -661,9 +669,19 @@ video {
   border-color: rgb(242 242 242 / var(--tw-border-opacity));
 }
 
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(105 154 254 / var(--tw-border-opacity));
+}
+
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-gray3 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 130 130 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -700,6 +718,11 @@ video {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pl-6 {
@@ -739,6 +762,11 @@ video {
   color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
+.text-gray5 {
+  --tw-text-opacity: 1;
+  color: rgb(224 224 224 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -753,16 +781,37 @@ video {
   outline-offset: 2px;
 }
 
-html,
+/* html,
 body {
   font-size: 14px;
-}
+} */
 
 .auto-login:checked + label {
   background-image: url('../images/checkbox-checked.svg');
   background-position: left;
   background-repeat: no-repeat;
   padding-left: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(224 224 224 / var(--tw-border-opacity));
+  padding: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.form-input:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+:is(.dark .form-input:focus) {
+  --tw-border-opacity: 1;
+  border-color: rgb(105 154 254 / var(--tw-border-opacity));
 }
 
 .hover\:bg-checkbox-checked:hover {
@@ -808,12 +857,21 @@ body {
     align-items: center;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:rounded-2xl {
     border-radius: 1rem;
   }
 
   .md\:border {
     border-width: 1px;
+  }
+
+  .md\:border-gray1 {
+    --tw-border-opacity: 1;
+    border-color: rgb(51 51 51 / var(--tw-border-opacity));
   }
 
   .md\:border-gray5 {

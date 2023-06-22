@@ -16,17 +16,17 @@
 <body>
   <!-- 라이트 / 다크 모드 토글 버튼 -->
   <!-- 1. 자바스크립트로 제어하기 위한 버튼 클래스 지정 (toggle-theme-button) -->
-  <!-- 2. body 영역을 기준으로 오른쪽 상단에 배치 / 3. 글자 및 배경색상 / 4. 라운딩 처리 / 5. 버튼 크기 고정(커스텀) -->
-  <button type="button" class="">
+  <!-- 2. body 영역을 기준으로 오른쪽 상단에 배치 / 3. 글자 및 배경색상 / 4. 라운딩 처리 / 5. 버튼 크기 고정(커스텀) / 6. 위아래 안쪽 여백 지정 -->
+  <button type="button" class="toggle-theme-button fixed top-5 right-5 rounded-md text-gray5 bg-gray3 w-[200px] py-4">
     다크모드 보기
   </button>
   <!-- 전체 콘텐츠 컨테이너 -->
   <!-- 1. 플렉스로 배치 (모바일 및 데스크탑 스타일) / 2. 높이 / 3. 텍스트 색상 / 4. 다크모드 텍스트 및 배경 색상 / 5. 안쪽 여백 -->
-  <div class="">
+  <div class="dark:bg-gray-900 h-screen flex items-start md:items-center md:justify-center text-gray1 dark:text-white py-24">
 
     <!-- 데스크 탑에서 보여지게 될 로그인 콘텐츠 박스(테두리) -->
     <!-- 1. 가로 크기(full) / 2. 데스크탑 최대 가로크기(md:min-w-screen-sm) / 3. 데스크탑에만 border / 4. padding-->
-    <div class="">
+    <div class="w-full px-5 py-10 md:max-w-screen-sm md:border md:rounded-2xl md:border-gray1">
       <!-- 이듬 브랜드 로고 -->
       <h1 class="logo">
         <a href="#">
@@ -44,41 +44,42 @@
 
       <!-- 이듬 슬로건 -->
       <!-- 1. 제목과 슬로건 사이 여백(margin) / 2. 글자 크기 및 색상 / 3. 다크모드 글자 색상-->
-      <p class="">
+      <p class="mt-5 text-3xl text-black dark:text-white">
         함께 성장하는 바른 교육,
         <span class="block">이듬(E.UID)</span>
       </p>
 
       <!-- 회원 로그인 폼 -->
       <!-- 1. 슬로건과 로그인 폼 사이 여백(margin) -->
-      <form class="">
+      <form class="mt-10">
         <fieldset>
           <!-- 스크린리더를 위한 유틸리티 클래스 적용 -->
-          <legend class="">회원 로그인 폼</legend>
+          <legend class="sr-only">회원 로그인 폼</legend>
 
           <!-- 아이디 입력 서식 -->
           <div>
             <!-- 스크린리더를 위한 유틸리티 클래스 적용 -->
-            <label for="userId" class="">아이디</label>
+            <label for="userId" class="sr-only">아이디</label>
             <!-- 1. 테두리 관련 속성 / 2. 안쪽여백 / 3. 아웃라인 제거 -->
             <!-- 4. :focus 스타일 - 선색상 black / 다크모드 선색상 primary / 다크모드 글자색상 black -->
-            <input id="userId" name="userId" class="" type="text"
+            <input id="userId" name="userId" 
+            class="form-input" type="text"
               placeholder="아이디" required />
           </div>
 
           <!-- 비밀번호 입력 서식 -->
-          <div class="">
+          <div class="mt-2">
             <label for="userPassword" class="sr-only">비밀번호</label>
             <!-- 반복되는 스타일을 @apply 디렉티브 활용 하여 tailwind.css 파일에 작성할 것 -->
             <!-- 
-                .input{
+                .form-input{
                   @apply ;
                 }
                 .input:focus{
                   @apply ;
                 }
               -->
-            <input id="userPassword" name="userPassword" class=""
+            <input id="userPassword" name="userPassword" class="form-input "
               type="password" placeholder="비밀번호" required />
           </div>
 
