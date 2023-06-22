@@ -8,7 +8,7 @@ body {
 } */
 
 .auto-login:checked + label {
-  @apply pl-6 bg-left bg-no-repeat bg-checkbox-checked;
+  @apply bg-checkbox-checked;
 }
 
 .form-input{
